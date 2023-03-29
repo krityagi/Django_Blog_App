@@ -3,6 +3,7 @@ if [-d "venv"]
 then
     echo "Python virtual env exists"
 else
+    apt-get install python3-venv
     python3 -m venv venv
 fi
 
