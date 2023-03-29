@@ -11,7 +11,7 @@ source venv/Scripts/activate
 
 pip install -r requirements.txt
 
-if [-d "logs"]
+if [ -d "logs" ]
 then
     echo "Log folder exists"
 else
