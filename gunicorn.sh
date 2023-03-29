@@ -1,9 +1,9 @@
 #!/bin/bash
 source venv/Scripts/activate
 
-cd /var/lib/jenkins/workspace/Django_app/blogproj
-python3 manage.py makemigrations
-python3 manage.py migrate
+cd /var/lib/jenkins/workspace/Django_app/
+python3 ./blogproj/manage.py makemigrations
+python3 ./blogproj/manage.py migrate
 
 echo "Migration done"
 
