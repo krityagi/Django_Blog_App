@@ -5,7 +5,6 @@ then
 else
     sudo apt update
     python -m venv env
-    pip install self==2020.12.3
 fi
 
 echo $PWD
