@@ -1,20 +1,26 @@
 {% load static %}
 <html>
+
+<script src="{% static 'design.js' %}"></script>
+
 <head>
-    <title>Sign Up</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+  <title>Sign Up</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <div class="container">
   <div class="brand-logo"></div>
   <div class="brand-title">BlogSite</div>
   <div class="inputs">
-    <form action="/signin" method = "post">
-    {% csrf_token %}
-    <label>USERNAME</label>
-    <input type="text" id="username" name="username" placeholder="username" required />
-    <label>PASSWORD</label>
-    <input type="password" id="pass1" name="pass1" placeholder="Min 6 charaters long" />
-    <button type="submit">Login</button>
+    <form action="/signin" method="post">
+      {% csrf_token %}
+      <label>USERNAME</label>
+      <input type="text" id="username" name="username" placeholder="username" required />
+      <label>PASSWORD</label>
+      <input type="password" id="pass1" name="pass1" placeholder="Min 6 charaters long" />
+      <br>
+      <br>
+      <br>
+      <button type="submit">Login</button>
     </form>
   </div>
 </div>

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # own
     'blog.apps.BlogConfig',
+    "bootstrap5",
 ]
 
 MIDDLEWARE = [

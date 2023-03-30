@@ -13,15 +13,15 @@ def home(request):
 def signup(request):
     if request.method == "POST":
         username = request.POST.get('username')
-        #fname = request.POST.get('fname')
-        #lname = request.POST.get('lname')
+        # fname = request.POST.get('fname')
+        # lname = request.POST.get('lname')
         email = request.POST.get('email')
         pass1 = request.POST.get('pass1')
-        #pass2 = request.POST.get('pass2')
+        # pass2 = request.POST.get('pass2')
 
         myuser = User.objects.create_user(username, email, pass1)
-        #myuser.first_name = fname
-        #myuser.last_name = lname
+        # myuser.first_name = fname
+        # myuser.last_name = lname
         myuser.save()
         messages.success(request, "Your account has been successfully created")
 
