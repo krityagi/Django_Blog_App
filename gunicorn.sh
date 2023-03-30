@@ -1,5 +1,5 @@
 #!/bin/bash
-source venv/Scripts/activate
+source env/Scripts/activate
 
 cd /var/lib/jenkins/workspace/Django_app/
 python3 ./blogproj/manage.py makemigrations

@@ -1,13 +1,13 @@
 #!/bin/bash
-if [ -d "venv" ]
+if [ -d "env" ]
 then
     echo "Python virtual env exists"
 else
-    python3 -m venv venv
+    python3 -m venv env
 fi
 
 echo $PWD
-source venv/Scripts/activate
+source env/Scripts/activate
 python3 /var/lib/jenkins/workspace/Django_app/blogproj/manage.py runserver
 
 pip install -r requirements.txt
