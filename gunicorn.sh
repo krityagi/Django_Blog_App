@@ -2,8 +2,8 @@
 source env/bin/activate
 
 cd /var/lib/jenkins/workspace/Django_app/blogproj
-python3.11 manage.py makemigrations
-python3.11 manage.py migrate
+python3 manage.py makemigrations
+python3 manage.py migrate
 
 echo "Migration done"
 
