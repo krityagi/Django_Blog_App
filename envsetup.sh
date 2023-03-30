@@ -7,7 +7,7 @@ else
 fi
 
 echo $PWD
-source env/Scripts/activate
+source env/bin/activate
 python3 /var/lib/jenkins/workspace/Django_app/blogproj/manage.py runserver
 
 pip install -r requirements.txt
