@@ -3,14 +3,14 @@ if [ -d "env" ]
 then
     echo "Python virtual env exists"
 else
-    python3 -m venv env
+    python3.11.2 -m venv env
 fi
 
 echo $PWD
 source env/bin/activate
 
-
-pip3 install -r requirements.txt
+pip install --upgrade pip
+pip install -r requirements.txt
 
 if [ -d "logs" ]
 then
