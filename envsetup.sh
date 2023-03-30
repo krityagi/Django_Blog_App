@@ -4,13 +4,12 @@ then
     echo "Python virtual env exists"
 else
     sudo apt update
-    python3.11 -m venv env
+    python -m venv env
 fi
 
 echo $PWD
 source env/bin/activate
 
-pip install --upgrade pip
 pip install -r requirements.txt
 
 if [ -d "logs" ]
