@@ -9,7 +9,7 @@ fi
 echo $PWD
 source env/bin/activate
 
-pip3 install -r requirements.txt
+python3.11 -m pip install -r requirements.txt
 
 if [ -d "logs" ]
 then
