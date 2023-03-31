@@ -4,7 +4,7 @@ Requires=gunicorn.socket
 After=network.target
 
 [Service]
-User=sammy
+User=root
 Group=www-data
 WorkingDirectory=/root/.jenkins/workspace/django-app/
 ExecStart=/root/.jenkins/workspace/django-app/env/bin/gunicorn \
