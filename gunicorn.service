@@ -6,7 +6,7 @@ After=network.target
 [Service]
 User=sammy
 Group=www-data
-WorkingDirectory=/root/.jenkins/workspace/django-app
+WorkingDirectory=/root/.jenkins/workspace/django-app/
 ExecStart=/root/.jenkins/workspace/django-app/env/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
