@@ -12,4 +12,3 @@ sudo systemctl enable nginx
 echo "nginx has been started"
 
 sudo systemctl status nginx
-python -m pip list
