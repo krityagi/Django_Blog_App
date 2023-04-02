@@ -4,6 +4,7 @@ source env/bin/activate
 cd /root/.jenkins/workspace/django-app/blogproj
 python manage.py makemigrations
 python manage.py migrate
+python manage.py collectstatic --no-input
 
 echo "Migration done"
 
