@@ -1,0 +1,26 @@
+FROM python:3.11.2
+
+ENV PYTHONBUFFERED 1
+COPY /blogproj/req.txt /tmp/req.txt
+COPY /blogproj/req_dev.txt /tmp/req_dev.txt
+COPY /blogproj /blogproj
+WORKDIR /blogproj
+EXPOSE 8000
+
+ARG DEV=flase
+RUN python -m venv /py && \
+    /py/bin/pip install --upgrade pip && \
+    /py/bin/pip install -r /tmp/req.txt && \
+    if [ $DEV = "true" ]; \
+    then /py/bin/pip install -r /tmp/req_dev.txt ; \
+    fi && \
+    rm -fr /tmp && \
+    adduser \
+    --disabled-password \
+    --no-create-home \
+    django-user && \
+    chown -R django-user:django-user -R /blogproj/
+
+ENV PATH="/scripts:/py/bin:$PATH"
+
+USER django-user
