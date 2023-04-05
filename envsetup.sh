@@ -3,7 +3,8 @@ if [ -d "env" ]
 then
     echo "Python virtual env exists"
 else
-    python -m venv env
+    sudo apt update
+    python3.11 -m venv env
 fi
 
 echo $PWD
