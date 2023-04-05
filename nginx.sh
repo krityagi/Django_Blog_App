@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo cp -rf app.conf /etc/nginx/sites-available/app
+sudo cp -rf app.conf /etc/nginx/conf.d
 chmod -R 750 /root/.jenkins/workspace/django-app/
 sudo ln -s /etc/nginx/sites-available/app /etc/nginx/sites-enabled
 
