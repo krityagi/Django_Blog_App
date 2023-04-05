@@ -3,7 +3,6 @@ if [ -d "env" ]
 then
     echo "Python virtual env exists"
 else
-    sudo apt update
     python -m venv env
 fi
 
