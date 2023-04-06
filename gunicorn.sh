@@ -1,14 +1,14 @@
 #!/bin/bash
 source env/bin/activate
 
-cd /var/lib/jenkins/workspace/Django-app/blogproj
+cd /var/lib/jenkins/workspace/Django_app/blogproj
 python manage.py makemigrations
 python manage.py migrate
 python manage.py collectstatic --noinput
 
 echo "Migration done"
 
-cd /var/lib/jenkins/workspace/Django-app/
+cd /var/lib/jenkins/workspace/Django_app/
 
 sudo cp -rf gunicorn.socket /etc/systemd/system/
 sudo cp -rf gunicorn.service /etc/systemd/system/
