@@ -42,6 +42,7 @@ def signin(request):
             print(fname)
 
             return render(request, "authentication/index.html", {'fname': fname})
+
         else:
             messages.error(request, "Wrong Username and Password")
             return redirect('home')

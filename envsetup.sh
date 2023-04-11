@@ -8,9 +8,9 @@ else
 fi
 
 echo $PWD
+echo "activating the vritual environment "
 source env/bin/activate
 
-pip install --upgrade pip
 pip install -r requirements.txt
 
 if [ -d "logs" ]
