@@ -1,10 +1,9 @@
-FROM python:3.11
+FROM python:3.11.2
 ENV PYTHONUNBUFFERED 1
 
-COPY requirements /tmp/req.txt
+COPY requirements.txt /tmp/req.txt
 COPY blogproj /blogproj
 WORKDIR /blogproj
-EXPOSE 8443
 
 RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
