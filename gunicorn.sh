@@ -8,7 +8,7 @@ python3.11 manage.py collectstatic --noinput
 
 echo "Migration done"
 
-cd /var/lib/jenkins/workspace/django-app/
+cd /var/lib/jenkins/workspace/django-app
 
 sudo cp -rf gunicorn.socket /etc/systemd/system/
 sudo cp -rf gunicorn.service /etc/systemd/system/
