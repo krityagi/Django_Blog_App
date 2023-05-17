@@ -2,9 +2,9 @@
 source venv/Scripts/activate
 
 cd /var/lib/jenkins/workspace/django-app/blogproj
-python manage.py makemigrations
-python manage.py migrate
-python manage.py collectstatic --noinput
+python3.11 manage.py makemigrations
+python3.11 manage.py migrate
+python3.11 manage.py collectstatic --noinput
 
 echo "Migration done"
 
