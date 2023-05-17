@@ -4,7 +4,7 @@ then
     echo "Python virtual env exists"
 else
     sudo apt update
-    python -m venv env
+    python -m virtualenv env
 fi
 
 echo $PWD
